@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
 let images = [];
-const iterations = 3;
+const iterations = 4;
 
 const getImages = () => {
   for (let i = 0; i <= iterations; i++) {
@@ -38,9 +38,13 @@ const callback = () => {
   downLoadimages();
 };
 
-function downloadImage(url, filepath) {
+function downloadImage(url, filepath, cb) {
   client.get(url, (res) => {
     res.pipe(fs.createWriteStream(filepath));
+    res.on('finish', function() {
+      console.log('download images finished call');
+      res.close(cb);
+    });
     res.on(`error`, (e) => {
       console.log(`Error fetching images ${err}`);
       reject(e);
@@ -48,10 +52,14 @@ function downloadImage(url, filepath) {
   });
 }
 
+const fileCallback = () => {
+  console.log(`files downloaded`);
+};
+
 const downLoadimages = () => {
   images.forEach((item) => {
     const fileName = uuidv4() + ".jpg";
-    return downloadImage(item, "./img-archive/" + fileName);
+    return downloadImage(item, "./img-archive/" + fileName, fileCallback);
   });
 };
 

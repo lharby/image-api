@@ -1,0 +1,23 @@
+{
+  "name": "image-api",
+  "version": "1.0.0",
+  "description": "Image API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "Images",
+    "API"
+  ],
+  "author": "Luke Harby",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "fs-extra": "^10.1.0",
+    "rimraf": "^3.0.2",
+    "uuid": "^9.0.0"
+  }
+}

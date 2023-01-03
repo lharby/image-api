@@ -1,6 +1,6 @@
-import fs from "fs";
+import { promises as fs } from "fs";
+import fetch from "node-fetch";
 import fsExtra from "fs-extra";
-import client from "https";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
@@ -20,7 +20,9 @@ const getImages = () => {
       })
       .then((res) => {})
       .catch((err) => {
-        console.log(err);
+        if (err) {
+          console.log(err);
+        }
         if (i === iterations) {
           getRandomSavedImage();
         }
@@ -29,38 +31,38 @@ const getImages = () => {
 };
 
 const callback = () => {
-  console.log("images before", images, images.length);
+  console.log("images before", images.length);
+  console.table(images);
   const rndNum = Math.floor(Math.random() * images.length);
   const singleImage = images[rndNum];
-  downloadImage(singleImage, "./img/output.jpg");
+  downloadFile(singleImage, "./img/output.jpg");
   images.splice(rndNum, 1);
-  console.log("images after: ", images, images.length);
+  console.log("images after: ", images.length);
+  console.table(images);
   downLoadimages();
 };
 
-function downloadImage(url, filepath, cb) {
-  client.get(url, (res) => {
-    res.pipe(fs.createWriteStream(filepath));
-    res.on('finish', function() {
-      console.log('download images finished call');
-      res.close(cb);
-    });
-    res.on(`error`, (e) => {
-      console.log(`Error fetching images ${err}`);
-      reject(e);
-    });
-  });
+const downloadFile = async (url, path) => {
+  const response = await fetch(url);
+  const blob = await response.blob();
+  const arrayBuffer = await blob.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
+  fs.writeFile(path, buffer);
 }
 
 const fileCallback = () => {
   console.log(`files downloaded`);
+  // callback();
 };
 
 const downLoadimages = () => {
-  images.forEach((item) => {
+  const allImages = images.map((item) => {
     const fileName = uuidv4() + ".jpg";
-    return downloadImage(item, "./img-archive/" + fileName, fileCallback);
+    return downloadFile(item, "./img-archive/" + fileName);
   });
+  Promise.all(allImages).then(() => {
+    fileCallback();
+  })
 };
 
 const getRandomSavedImage = () => {

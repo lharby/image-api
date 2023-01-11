@@ -1,4 +1,3 @@
-#!/usr/bin/env node
+#!usr/local/bin node
 
-nvm use 11
 npm run start

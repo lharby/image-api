@@ -1,0 +1,1 @@
+# 30 * * * * cd /home/lharby/sites/image-api &&(which node) index.js > /home/lharby/sites/image-api/log/errors.log 2>&1

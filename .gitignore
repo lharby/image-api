@@ -14,3 +14,6 @@ npm-debug.log
 
 # env files
 .env
+
+#linux files
+**/._*

@@ -1,0 +1,25 @@
+images before 5
+┌─────────┬───────────────────────────────────────────────────────────────────────┐
+│ (index) │                                Values                                 │
+├─────────┼───────────────────────────────────────────────────────────────────────┤
+│    0    │       'https://images.dog.ceo/breeds/borzoi/n02090622_8145.jpg'       │
+│    1    │   'https://images.dog.ceo/breeds/terrier-border/n02093754_6760.jpg'   │
+│    2    │  'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11334.jpg'   │
+│    3    │ 'https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_6459.jpg' │
+│    4    │       'https://images.dog.ceo/breeds/beagle/n02088364_5784.jpg'       │
+└─────────┴───────────────────────────────────────────────────────────────────────┘
+images after:  4
+┌─────────┬───────────────────────────────────────────────────────────────────────┐
+│ (index) │                                Values                                 │
+├─────────┼───────────────────────────────────────────────────────────────────────┤
+│    0    │   'https://images.dog.ceo/breeds/terrier-border/n02093754_6760.jpg'   │
+│    1    │  'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11334.jpg'   │
+│    2    │ 'https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_6459.jpg' │
+│    3    │       'https://images.dog.ceo/breeds/beagle/n02088364_5784.jpg'       │
+└─────────┴───────────────────────────────────────────────────────────────────────┘
+files downloaded
+Success
+Success
+Success
+Success
+Success

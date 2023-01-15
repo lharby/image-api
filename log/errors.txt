@@ -1,22 +1,22 @@
 images before 5
-┌─────────┬───────────────────────────────────────────────────────────────────────┐
-│ (index) │                                Values                                 │
-├─────────┼───────────────────────────────────────────────────────────────────────┤
-│    0    │       'https://images.dog.ceo/breeds/borzoi/n02090622_8145.jpg'       │
-│    1    │   'https://images.dog.ceo/breeds/terrier-border/n02093754_6760.jpg'   │
-│    2    │  'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11334.jpg'   │
-│    3    │ 'https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_6459.jpg' │
-│    4    │       'https://images.dog.ceo/breeds/beagle/n02088364_5784.jpg'       │
-└─────────┴───────────────────────────────────────────────────────────────────────┘
+┌─────────┬────────────────────────────────────────────────────────────────────┐
+│ (index) │                               Values                               │
+├─────────┼────────────────────────────────────────────────────────────────────┤
+│    0    │    'https://images.dog.ceo/breeds/brabancon/n02112706_2133.jpg'    │
+│    1    │ 'https://images.dog.ceo/breeds/poodle-standard/n02113799_2478.jpg' │
+│    2    │    'https://images.dog.ceo/breeds/malamute/n02110063_11227.jpg'    │
+│    3    │      'https://images.dog.ceo/breeds/clumber/n02101556_47.jpg'      │
+│    4    │   'https://images.dog.ceo/breeds/australian-shepherd/forest.jpg'   │
+└─────────┴────────────────────────────────────────────────────────────────────┘
 images after:  4
-┌─────────┬───────────────────────────────────────────────────────────────────────┐
-│ (index) │                                Values                                 │
-├─────────┼───────────────────────────────────────────────────────────────────────┤
-│    0    │   'https://images.dog.ceo/breeds/terrier-border/n02093754_6760.jpg'   │
-│    1    │  'https://images.dog.ceo/breeds/corgi-cardigan/n02113186_11334.jpg'   │
-│    2    │ 'https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_6459.jpg' │
-│    3    │       'https://images.dog.ceo/breeds/beagle/n02088364_5784.jpg'       │
-└─────────┴───────────────────────────────────────────────────────────────────────┘
+┌─────────┬────────────────────────────────────────────────────────────────────┐
+│ (index) │                               Values                               │
+├─────────┼────────────────────────────────────────────────────────────────────┤
+│    0    │ 'https://images.dog.ceo/breeds/poodle-standard/n02113799_2478.jpg' │
+│    1    │    'https://images.dog.ceo/breeds/malamute/n02110063_11227.jpg'    │
+│    2    │      'https://images.dog.ceo/breeds/clumber/n02101556_47.jpg'      │
+│    3    │   'https://images.dog.ceo/breeds/australian-shepherd/forest.jpg'   │
+└─────────┴────────────────────────────────────────────────────────────────────┘
 files downloaded
 Success
 Success
